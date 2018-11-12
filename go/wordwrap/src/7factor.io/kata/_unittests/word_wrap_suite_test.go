@@ -25,7 +25,7 @@ var _ = Describe("The word wrap function", func() {
 
 		It("When wrapping long columns", func() {
 			actual := kata.Wrap("birdbirdbirdistheword", 4)
-			Expect(actual).To(Equal("bird\nbird\nbird\nisth\nword"))
+			Expect(actual).To(Equal("bird\nbird\nbird\nisth\newor\nd"))
 		})
 
 		It("When wrapping on a word boundry", func() {
