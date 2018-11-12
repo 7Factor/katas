@@ -7,5 +7,5 @@ management.
 
 ## Running Tests
 
-Run `./test.sh`.  We use ginkgo/gomega for our testing suite. Feel free
+Run `./test.sh`.  This will run ginkgo in watch mode. Feel free
 to use the native go test suite if you prefer.
