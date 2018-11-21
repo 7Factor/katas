@@ -21,3 +21,19 @@ extensible, and modular software. For more info, read some wikis:
 This repo can and should be home to all manner of programming languages.
 Feel free to contribute a kata and place it in the appropriate folder via
 a PR.
+
+Make sure you follow this convention:
+
+```
+<root-folder>
+   |
+   - <language>
+     |
+     - <kata-name>
+```
+
+You should be able to follow examples for each language by looking at an existing one.
+We try to name things in a good way, so please stick to sane conventions that
+are reproducible across other katas.
+
+Have fun!

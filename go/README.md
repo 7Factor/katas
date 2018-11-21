@@ -3,7 +3,9 @@
 ## Installation
 
 Run `./install.sh` in any of the kata directories. We use glide for dependency
-management.
+management. Find it here:
+
+http://glide.sh/
 
 ## Running Tests
 
