@@ -36,4 +36,8 @@ You should be able to follow examples for each language by looking at an existin
 We try to name things in a good way, so please stick to sane conventions that
 are reproducible across other katas.
 
+The easiest way to do that is to pull the `_blank` project inside the folder of your
+language of choice and roll that way. If a template doesn't exist, make one and submit
+it!
+
 Have fun!
