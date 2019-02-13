@@ -4,3 +4,4 @@ pkg/
 .idea/
 .DS_store
 **/vendor
+*/node_modules
