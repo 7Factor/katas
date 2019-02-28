@@ -1,0 +1,17 @@
+package: ""
+import:
+- package: github.com/onsi/ginkgo
+  version: ^1.6.0
+- package: github.com/onsi/gomega
+  version: ^1.4.2
+- package: github.com/hpcloud/tail
+  version: ^1.0.0
+- package: golang.org/x/net
+  subpackages:
+  - html/charset
+- package: golang.org/x/text
+  version: ^0.3.0
+  subpackages:
+  - encoding
+- package: gopkg.in/yaml.v2
+  version: ^2.2.1
