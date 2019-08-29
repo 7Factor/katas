@@ -42,4 +42,4 @@ public class WrapperTest {
 	public void wrapJustBeforeWordBoundary() {
 		assertEquals("word\nword", Wrapper.wrap("word word", 4));
 	}
-}zo
+}
