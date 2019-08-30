@@ -10,10 +10,10 @@ checkout out this [wiki](https://en.wikipedia.org/wiki/Kata_(programming)).
 
 ### What is TDD/BDD?ATDD?
 
-These are metal frameworks with the end goal of producing stable, readable,
+These are mental frameworks with the end goal of producing stable, readable,
 extensible, and modular software. For more info, read some wikis:
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development),
-[BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)
+[BDD](https://en.wikipedia.org/wiki/Behavior-driven_development),
 [ATDD](https://en.wikipedia.org/wiki/Acceptance_test%E2%80%93driven_development).
 
 ### Contribute!
