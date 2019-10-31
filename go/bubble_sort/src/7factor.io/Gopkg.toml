@@ -1,0 +1,9 @@
+required = ["gopkg.in/fsnotify.v1"]
+
+[[constraint]]
+  name = "gopkg.in/fsnotify.v1"
+  source = "https://github.com/fsnotify/fsnotify.git"
+
+[prune]
+  go-tests = true
+  unused-packages = true
