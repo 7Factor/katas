@@ -12,10 +12,10 @@ func TestKata(t *testing.T) {
 }
 
 var _ = Describe("Given an array of ints", func() {
-	Context("When passed an empty array", func() {
-		It("Should return an empty array and no errors.", func() {
-			var emptyArr []int
-			actual, err := BubbleSort(emptyArr)
+	Context("When passed a nil input", func() {
+		It("Should return an empty array and no errors", func() {
+			emptyArr := make([]int, 0)
+			actual, err := bubbleSort(nil)
 			Expect(actual).To(Equal(emptyArr))
 			Expect(err).To(BeNil())
 		})
