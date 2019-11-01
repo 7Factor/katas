@@ -34,7 +34,16 @@ var _ = Describe("Given an array of ints", func() {
 		It("Should return the array and no errors", func() {
 			singleElement := []int{1}
 			actual, err := bubbleSort(singleElement)
-			Expect(actual).To(Equal(actual))
+			Expect(actual).To(Equal(singleElement))
+			Expect(err).To(BeNil())
+		})
+	})
+
+	Context("When passed a sorted array with two elements", func() {
+		It("Should return the array and no errors", func() {
+			twoElements := []int{1,2}
+			actual, err := bubbleSort(twoElements)
+			Expect(actual).To(Equal(twoElements))
 			Expect(err).To(BeNil())
 		})
 	})
