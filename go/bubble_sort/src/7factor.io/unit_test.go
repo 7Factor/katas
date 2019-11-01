@@ -47,4 +47,13 @@ var _ = Describe("Given an array of ints", func() {
 			Expect(err).To(BeNil())
 		})
 	})
+
+	Context("When passed an unsorted array with two elements", func() {
+		It("Should return the array and no errors", func() {
+			unsorted := []int{2,1}
+			actual, err := bubbleSort(unsorted)
+			Expect(actual).To(Equal([]int{1,2}))
+			Expect(err).To(BeNil())
+		})
+	})
 })
