@@ -10,5 +10,5 @@ func bubbleSort(arr []int) ([]int, error) {
 	if arr == nil {
 		return make([]int, 0), nil
 	}
-	return nil, nil
+	return arr, nil
 }
