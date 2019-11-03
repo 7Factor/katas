@@ -15,10 +15,21 @@ func bubbleSort(arr []int) ([]int, error) {
 		return arr, nil
 	}
 
-	if arr[0] > arr[1] {
-		tmp := arr[1]
-		arr[1] = arr[0]
-		arr[0] = tmp
+	if len(arr) == 2 {
+		if arr[0] > arr[1] {
+			tmp := arr[1]
+			arr[1] = arr[0]
+			arr[0] = tmp
+		}
+		return arr, nil
+	}
+
+	for i := 0; i < len(arr)-1; i++ {
+		if arr[i] > arr[i+1] {
+			tmp := arr[i+1]
+			arr[i+1] = arr[i]
+			arr[i] = tmp
+		}
 	}
 
 	fmt.Println(arr)
