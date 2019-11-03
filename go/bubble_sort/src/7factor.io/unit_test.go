@@ -3,6 +3,7 @@ package main
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"sort"
 	"testing"
 )
 
@@ -92,4 +93,27 @@ var _ = Describe("Given an array of ints", func() {
 			Expect(err).To(BeNil())
 		})
 	})
+
+	Context("When passed a giant input", func() {
+		It("Should return a sorted array and no errors", func() {
+			bigUnsorted := makeRandomArray(Range{0, 100000})
+			actual, err := bubbleSort(bigUnsorted)
+			sort.Ints(bigUnsorted)
+			Expect(actual).To(Equal(bigUnsorted))
+			Expect(err).To(BeNil())
+		})
+	})
 })
+
+type Range struct {
+	min int
+	max int
+}
+
+func makeRandomArray(r Range) []int {
+	a := make([]int, r.max-r.min+1)
+	for i := range a {
+		a[i] = r.min + i
+	}
+	return a
+}
