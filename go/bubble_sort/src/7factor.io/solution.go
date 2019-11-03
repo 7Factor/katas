@@ -6,6 +6,11 @@ func main() {
 	fmt.Println("the go kata")
 }
 
+type ArrayAndIndex struct {
+	arr   []int
+	index int
+}
+
 func bubbleSort(arr []int) ([]int, error) {
 	if arr == nil {
 		return make([]int, 0), nil
@@ -15,24 +20,22 @@ func bubbleSort(arr []int) ([]int, error) {
 		return arr, nil
 	}
 
-	if len(arr) == 2 {
-		if arr[0] > arr[1] {
-			tmp := arr[1]
-			arr[1] = arr[0]
-			arr[0] = tmp
-		}
-		return arr, nil
-	}
-
 	for i := 0; i < len(arr)-1; i++ {
-		if arr[i] > arr[i+1] {
-			tmp := arr[i+1]
-			arr[i+1] = arr[i]
-			arr[i] = tmp
+		compareAndSwap(ArrayAndIndex{arr: arr, index:i})
+		for j := 0; j < len(arr)-1; j++ {
+			compareAndSwap(ArrayAndIndex{arr: arr, index:j})
 		}
 	}
 
 	fmt.Println(arr)
 
 	return arr, nil
+}
+
+func compareAndSwap(ai ArrayAndIndex) {
+	if ai.arr[ai.index] > ai.arr[ai.index+1] {
+		tmp := ai.arr[ai.index+1]
+		ai.arr[ai.index+1] = ai.arr[ai.index]
+		ai.arr[ai.index] = tmp
+	}
 }
