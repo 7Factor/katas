@@ -66,15 +66,15 @@ var _ = Describe("Given an array of ints", func() {
 		})
 	})
 
-	//Context("When passed an unsorted arr with three elements where only the first element is out of order", func() {
-	//	It("Should return a sorted arr and no errors", func() {
-	//		firstUnsorted := []int{2,1,3}
-	//		actual, err := sortInts(firstUnsorted)
-	//		Expect(actual).To(Equal([]int{1,2,3}))
-	//		Expect(err).To(BeNil())
-	//	})
-	//})
-	//
+	Context("When passed an unsorted arr with three elements where only the first element is out of order", func() {
+		It("Should return a sorted arr and no errors", func() {
+			firstUnsorted := []int{2,1,3}
+			actual, err := sortInts(firstUnsorted)
+			Expect(actual).To(Equal([]int{1,2,3}))
+			Expect(err).To(BeNil())
+		})
+	})
+	
 	//Context("When passed an unsorted arr with three elements where only the second element is out of order", func() {
 	//	It("Should return a sorted arr and no errors", func() {
 	//		secondUnsorted := []int{1,3,2}
