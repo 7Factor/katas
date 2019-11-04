@@ -15,15 +15,23 @@ func sortInts(arr []int) ([]int, error) {
 		return arr, nil
 	}
 
+	builder := make([]int, 0)
 	first := arr[0]
-	second := arr[1]
-	if first < second {
-		arr = []int{first, second}
-	} else {
-		arr = []int{second, first}
+	lessThan := make([]int, 0)
+	greaterThan := make([]int, 0)
+
+	for i := 0; i < len(arr); i++ {
+		if arr[i] < first {
+			lessThan = append(lessThan, arr[i])
+		}
+		if arr[i] > first {
+			greaterThan = append(greaterThan, arr[i])
+		}
 	}
 
-	fmt.Println(arr)
+	builder = append(builder, lessThan...)
+	builder = append(builder, first)
+	builder = append(builder, greaterThan...)
 
-	return arr, nil
+	return builder, nil
 }
