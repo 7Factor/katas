@@ -3,6 +3,7 @@ package main
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"sort"
 	"testing"
 )
 
@@ -74,34 +75,34 @@ var _ = Describe("Given an array of ints", func() {
 			Expect(err).To(BeNil())
 		})
 	})
-	
-	//Context("When passed an unsorted arr with three elements where only the second element is out of order", func() {
-	//	It("Should return a sorted arr and no errors", func() {
-	//		secondUnsorted := []int{1,3,2}
-	//		actual, err := sortInts(secondUnsorted)
-	//		Expect(actual).To(Equal([]int{1,2,3}))
-	//		Expect(err).To(BeNil())
-	//	})
-	//})
-	//
-	//Context("When passed an unsorted arr with three elements where the first and second elements are out of order", func() {
-	//	It("Should return a sorted arr and no errors", func() {
-	//		fullyUnsorted := []int{3,2,1}
-	//		actual, err := sortInts(fullyUnsorted)
-	//		Expect(actual).To(Equal([]int{1,2,3}))
-	//		Expect(err).To(BeNil())
-	//	})
-	//})
-	//
-	//Context("When passed a giant input", func() {
-	//	It("Should return a sorted array and no errors", func() {
-	//		bigUnsorted := makeRandomArray(Range{0, 100000})
-	//		actual, err := sortInts(bigUnsorted)
-	//		sort.Ints(bigUnsorted)
-	//		Expect(actual).To(Equal(bigUnsorted))
-	//		Expect(err).To(BeNil())
-	//	})
-	//})
+
+	Context("When passed an unsorted arr with three elements where only the second element is out of order", func() {
+		It("Should return a sorted arr and no errors", func() {
+			secondUnsorted := []int{1,3,2}
+			actual, err := sortInts(secondUnsorted)
+			Expect(actual).To(Equal([]int{1,2,3}))
+			Expect(err).To(BeNil())
+		})
+	})
+
+	Context("When passed an unsorted arr with three elements where the first and second elements are out of order", func() {
+		It("Should return a sorted arr and no errors", func() {
+			fullyUnsorted := []int{3,2,1}
+			actual, err := sortInts(fullyUnsorted)
+			Expect(actual).To(Equal([]int{1,2,3}))
+			Expect(err).To(BeNil())
+		})
+	})
+
+	Context("When passed a giant input", func() {
+		It("Should return a sorted array and no errors", func() {
+			bigUnsorted := makeRandomArray(Range{0, 10000})
+			actual, err := sortInts(bigUnsorted)
+			sort.Ints(bigUnsorted)
+			Expect(actual).To(Equal(bigUnsorted))
+			Expect(err).To(BeNil())
+		})
+	})
 })
 
 type Range struct {

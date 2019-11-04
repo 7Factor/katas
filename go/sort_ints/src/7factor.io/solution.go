@@ -29,8 +29,10 @@ func sortInts(arr []int) ([]int, error) {
 		}
 	}
 
+	lessThan, _ = sortInts(lessThan)
 	builder = append(builder, lessThan...)
 	builder = append(builder, first)
+	greaterThan, _ = sortInts(greaterThan)
 	builder = append(builder, greaterThan...)
 
 	return builder, nil
