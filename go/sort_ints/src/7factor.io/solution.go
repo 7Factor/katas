@@ -3,7 +3,20 @@ package main
 import "fmt"
 
 func main() {
+
 	fmt.Println("the go kata")
+
+	arr := makeRandomArray(Range{0, 10000})
+
+	fmt.Println(arr, "will sort %v")
+
+	sorted, err := sortInts(arr)
+
+	if err != nil {
+		_ = fmt.Errorf("caught error while running sort: %v", err)
+	}
+
+	fmt.Println(sorted, "sorted array is: %v")
 }
 
 func sortInts(arr []int) ([]int, error) {
