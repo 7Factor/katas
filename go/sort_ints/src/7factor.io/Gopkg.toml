@@ -1,0 +1,17 @@
+required = ["gopkg.in/fsnotify.v1"]
+
+[[constraint]]
+   name = "gopkg.in/fsnotify.v1"
+   source = "https://github.com/fsnotify/fsnotify.git"
+
+[[constraint]]
+  name = "github.com/onsi/ginkgo"
+  version = "1.10.3"
+
+[[constraint]]
+  name = "github.com/onsi/gomega"
+  version = "1.7.1"
+
+[prune]
+  go-tests = true
+  unused-packages = true
