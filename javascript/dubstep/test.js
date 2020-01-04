@@ -50,7 +50,12 @@ describe('Dubstep', () => {
   test('should handle multiple encodings of `WUB` in between words and letters', () => {
     let actual = songDecoder.decode('AWUBWUBB');
     expect(actual).toEqual('A B')
-  })
+  });
+
+  test('should handle multiple encodings of `WUB` before or after words and letters', () => {
+    let actual = songDecoder.decode('WUBTHEWUBWUBKOMBUCHAWUBWUBMUSHROOMWUBWUBPEOPLEWUBWUBSITTINGWUBAROUNDWUBWUBWUBALLWUBDAY');
+    expect(actual).toEqual('THE KOMBUCHA MUSHROOM PEOPLE SITTING AROUND ALL DAY')
+  });
 });
 
 let _randomString = (length) => {
