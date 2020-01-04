@@ -1,4 +1,5 @@
 {
+  "repository": "https://github.com/7Factor/katas",
   "scripts": {
     "test": "jest"
   },
