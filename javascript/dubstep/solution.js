@@ -5,7 +5,7 @@ let decode = (song) => {
   }
 
   let wubRe = new RegExp(/(?<name>WUB)/g);
-  return song.replace(wubRe, '');
+  return song.replace(wubRe, ' ').trim();
 };
 
 let _catchErrors = (input) => {

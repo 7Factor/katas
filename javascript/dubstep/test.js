@@ -20,7 +20,7 @@ describe('Dubstep', () => {
     let longInput = _randomString(201);
     let actual = songDecoder.decode(longInput);
     expect(actual).toEqual(new Error('inputs must be 200 characters or less'))
-  })
+  });
 
   test('should remove a single instance of `WUB`', () => {
     let actual = songDecoder.decode('WUB');
@@ -30,6 +30,21 @@ describe('Dubstep', () => {
   test('should remove multiple instances of `WUB`', () => {
     let actual = songDecoder.decode('WUBWUB');
     expect(actual).toEqual('');
+  });
+
+  test('should handle an encoding of `WUB` before a letter', () => {
+    let actual = songDecoder.decode('WUBT');
+    expect(actual).toEqual('T')
+  });
+
+  test('should handle an encoding of `WUB` before one word', () => {
+    let actual = songDecoder.decode('WUBTHE');
+    expect(actual).toEqual('THE')
+  })
+
+  test('should handle an encoding of `WUB` before each word', () => {
+    let actual = songDecoder.decode('WUBTHEWUBKOMBUCHA');
+    expect(actual).toEqual('THE KOMBUCHA')
   })
 });
 
