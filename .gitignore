@@ -5,3 +5,5 @@ pkg/
 .DS_store
 **/vendor
 */node_modules
+**/node_modules
+
