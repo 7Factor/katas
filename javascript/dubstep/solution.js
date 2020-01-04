@@ -22,6 +22,10 @@ let _catchErrors = (input) => {
   if (input.match(spaceRe)) {
     return new Error('no whitespace characters allowed')
   }
+
+  if (input.length > 200) {
+    return new Error('inputs must be 200 characters or less');
+  }
 };
 
 module.exports = {
