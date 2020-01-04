@@ -1,10 +1,11 @@
 let decode = (song) => {
   let err = _catchErrors(song);
-  if (err !== null) {
+  if (err != null) {
     return err;
   }
 
-  return null
+  let wubRe = new RegExp(/(?<name>WUB)/g);
+  return song.replace(wubRe, '');
 };
 
 let _catchErrors = (input) => {

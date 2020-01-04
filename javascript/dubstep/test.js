@@ -21,6 +21,16 @@ describe('Dubstep', () => {
     let actual = songDecoder.decode(longInput);
     expect(actual).toEqual(new Error('inputs must be 200 characters or less'))
   })
+
+  test('should remove a single instance of `WUB`', () => {
+    let actual = songDecoder.decode('WUB');
+    expect(actual).toEqual('');
+  });
+
+  test('should remove multiple instances of `WUB`', () => {
+    let actual = songDecoder.decode('WUBWUB');
+    expect(actual).toEqual('');
+  })
 });
 
 let _randomString = (length) => {
