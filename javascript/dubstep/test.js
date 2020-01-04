@@ -40,11 +40,16 @@ describe('Dubstep', () => {
   test('should handle an encoding of `WUB` before one word', () => {
     let actual = songDecoder.decode('WUBTHE');
     expect(actual).toEqual('THE')
-  })
+  });
 
   test('should handle an encoding of `WUB` before each word', () => {
     let actual = songDecoder.decode('WUBTHEWUBKOMBUCHA');
     expect(actual).toEqual('THE KOMBUCHA')
+  });
+
+  test('should handle multiple encodings of `WUB` in between words and letters', () => {
+    let actual = songDecoder.decode('AWUBWUBB');
+    expect(actual).toEqual('A B')
   })
 });
 
