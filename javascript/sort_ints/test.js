@@ -14,6 +14,11 @@ describe('The Integer Sorting Kata', () => {
   test('should return the array with single item array input', () => {
     let actual = sorter.sort([1]);
     expect(actual).toEqual([1]);
-  })
+  });
+
+  test('should return the array with a sorted, two item array input', () => {
+    let actual = sorter.sort([1,2]);
+    expect(actual).toEqual([1,2]);
+  });
 
 });
