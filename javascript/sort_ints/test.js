@@ -21,4 +21,9 @@ describe('The Integer Sorting Kata', () => {
     expect(actual).toEqual([1,2]);
   });
 
+  test('should return a sorted array with an unsorted, two item array input', () => {
+    let actual = sorter.sort([2,1]);
+    expect(actual).toEqual([1,2]);
+  });
+
 });
