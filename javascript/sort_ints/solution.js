@@ -7,17 +7,19 @@ let sort = (arr) => {
         return arr;
     }
 
-    return _buildNewArray(arr);
-};
+    let separator = arr[0];
+    let lessThan = [];
+    let greaterThan = [];
+    arr.forEach((int) => {
+        if (int < separator) {
+            lessThan.push(int);
+        }
+        if (int > separator) {
+            greaterThan.push(int)
+        }
+    });
 
-let _buildNewArray = (arr) => {
-    let first = arr[0];
-    let second = arr[1];
-    if (first<second) {
-        return [first, second];
-    } else {
-        return [second, first];
-    }
+    return lessThan.concat(separator).concat(greaterThan);
 };
 
 module.exports = {
