@@ -1,5 +1,9 @@
 let sort = (arr) => {
-    return [];
+    if (arr == null) {
+        return [];
+    }
+
+    return arr;
 };
 
 module.exports = {

@@ -5,4 +5,10 @@ describe('The Integer Sorting Kata', () => {
     let actual = sorter.sort(null);
     expect(actual).toEqual([]);
   });
+
+  test('should return empty array with empty array input', () => {
+    let actual = sorter.sort([]);
+    expect(actual).toEqual([]);
+  });
+
 });
