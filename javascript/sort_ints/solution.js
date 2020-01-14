@@ -1,29 +1,34 @@
 let sort = (arr) => {
-
     let cleaned = _clean(arr);
+
     if (cleaned.length < 2) {
         return cleaned;
     }
 
+    return _quickSort(arr);
+};
+
+let _quickSort = (arr) => {
     let separator = arr[0];
     let lessThan = [];
     let greaterThan = [];
-    cleaned.forEach((int) => {
-        lessThan = buildLessThan(lessThan, separator, int);
-        greaterThan = buildGreaterThan(greaterThan, separator, int);
+
+    arr.forEach((int) => {
+        lessThan = _buildLessThan(lessThan, separator, int);
+        greaterThan = _buildGreaterThan(greaterThan, separator, int);
     });
 
-    return lessThan.concat(separator).concat(greaterThan);
+    return sort(lessThan).concat(separator).concat(sort(greaterThan));
 };
 
-let buildLessThan = (arr, separator, int) => {
+let _buildLessThan = (arr, separator, int) => {
     if (int < separator) {
         arr.push(int);
     }
     return arr;
 };
 
-let buildGreaterThan = (arr, separator, int) => {
+let _buildGreaterThan = (arr, separator, int) => {
     if (int > separator) {
         arr.push(int)
     }

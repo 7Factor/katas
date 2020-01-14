@@ -28,6 +28,10 @@ describe('The Integer Sorting Kata', () => {
   test('should return the array with the first element of a three item array out of order', () => {
     _runSort([2,1,3], [1,2,3]);
   });
+
+  test('should return the array with the second element of a three item array out of order', () => {
+    _runSort([1,3,2], [1,2,3])
+  })
 });
 
 let _runSort = (input, expected) => {
