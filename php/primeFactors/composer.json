@@ -1,0 +1,12 @@
+{
+    "name": "hotsaucejake/prime-factors",
+    "description": "Return Prime Factors for a given number",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
