@@ -7,7 +7,10 @@ import (
 )
 
 func findPrime(n int) []int {
-	return make([]int, 0)
+	if n < 2 {
+		return []int{}
+	}
+	return []int{n}
 }
 
 type tests []struct {
@@ -18,6 +21,8 @@ type tests []struct {
 func TestKata(t *testing.T) {
 	tests := tests{
 		{1, []int{}},
+		{2, []int{2}},
+		{3, []int{3}},
 	}
 	runTests(tests, t)
 }
